@@ -7,10 +7,4 @@ describe("Express App", () => {
     expect(response.status).toBe(200);
     expect(response.text).toBe("Hello World");
   });
-
-  it("should fail with incorrect text", async () => {
-    const response = await request(app).get("/");
-    expect(response.status).toBe(200);
-    expect(response.text).toBe("Incorrect Text"); // This will intentionally fail
-  });
 });
